@@ -1,0 +1,106 @@
+$first_color: #0087c9;
+$second_color: #ffb168;
+
+.ticket {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 600px;
+    &-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .header {
+        background-color: $first_color;
+
+        &__logo {}
+
+        &__price {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+            color: #fff
+        }
+    }
+
+    .content {
+        hr:last-child{
+            display: none;
+        }
+        .flightTo,
+        .flightFrom {
+            padding: 0 20px;
+
+            .firstLine {
+                border-bottom: 1px solid rgba($color: gray, $alpha: 0.2);
+                padding: 10px 0;
+
+                &__from {}
+
+                &__uid-from {
+                    color: $first_color
+                }
+
+                &__arrow-icon {
+                    color: $first_color
+                }
+
+                &__to {}
+
+                &__uid-to {
+                    color: $first_color
+                }
+
+            }
+
+            .secondLine {
+                display: flex;
+                justify-content: space-between;
+
+                .flyFrom {
+                    .time {}
+
+                    .date {
+                        color: $first_color;
+                        padding-left: 5px;
+                    }
+                }
+
+                .totalTime {}
+
+                .flyTo {
+                    .date {
+                        color: $first_color;
+                        padding-right: 5px;
+                    }
+
+                    .time {}
+                }
+
+            }
+
+            .transfer {
+                display: flex;
+                justify-content: center;
+                color: $second_color;
+
+                &__line {}
+
+                &__count {}
+
+            }
+        }
+
+        .middleLine {
+            border-top: 3px solid $first_color;
+        }
+    }
+
+    &__button {
+        background-color: $second_color;
+        color: #fff;
+        border: none;
+        padding: 10px 0;
+    }
+}

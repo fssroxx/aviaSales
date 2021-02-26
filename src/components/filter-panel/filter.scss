@@ -1,0 +1,26 @@
+.filterBlock {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+    .sort {
+        display: flex;
+        flex-direction: column;
+
+        &__high {}
+
+        &__low {}
+
+    }
+
+    .filter,
+    .price,
+    .company {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price {}
+
+    .company {}
+}
