@@ -1,4 +1,11 @@
+import './segment.scss';
+
 const Segment = ({ segment }) => {
+    
+    const travelDurationHours = (segment.travelDuration / 60).toFixed(0)
+    const travelDurationMinutes = (segment.travelDuration % 60);
+    const showTravelDurationHours = (travelDurationHours === 0) ? null : (travelDurationHours + ' ' + 'ч')
+    const showTravelDurationMinutes = (travelDurationMinutes === 0) ? null : (travelDurationMinutes + ' ' + 'мин');
   return (
     <div className="flightTo">
       <div className="firstLine">
@@ -20,16 +27,18 @@ const Segment = ({ segment }) => {
           <span className="date">19 aug, wen</span>
         </p>
 
-        <p className="totalTime">{ segment.travelDuration / 60} hours</p>
+        <p className="totalTime">{ showTravelDurationHours }  {showTravelDurationMinutes}</p>
         <p className="flyTo">
           <span className="date">20 aug, tur</span>
           <span className="time">19:45</span>
         </p>
       </div>
       <div className="transfer">
-        <span className="transfer__line">-</span>
-        <span className="transfer__count">1 transfer</span>
-        <span className="transfer__line">-</span>
+        <div className="transfer__line">
+            <div className="transfer__count">1 transfer</div>
+        </div>
+        
+        
       </div>
       <div className="companyName">
         <p className="companyName__content">

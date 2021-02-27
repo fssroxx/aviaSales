@@ -14,7 +14,7 @@ const Ticket = () => {
   return (
     <div className="ticket-list">
       {ticket.result.flights.slice(0, counter).map((ticket) => {
-        return <TicketContent key={ticket.flightToken.slice(0,20)} ticket={ticket} />;
+        return <TicketContent key={ticket.flightToken.slice(0,30)} ticket={ticket} />;
       })}
 
       {(maxLength <= counter) ? null : <button onClick={plusCounter}>add more</button>}

@@ -1,0 +1,15 @@
+.transfer{
+    &__line{
+        display: block;
+        border-bottom: 1px solid rgb(115, 112, 112);
+        width: 500px;
+        position: relative;
+    }
+    &__count{
+        display: block;
+        position: absolute;
+        top:-12px;
+        left:250px-(34px);
+        background-color: #fff;
+    }
+}
