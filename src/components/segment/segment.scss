@@ -1,15 +1,87 @@
-.transfer{
-    &__line{
-        display: block;
-        border-bottom: 1px solid rgb(115, 112, 112);
-        width: 500px;
-        position: relative;
+$first_color: #0087c9;
+$second_color: #ffb168;
+
+ .flightTo,
+ .flightFrom {
+     padding: 0 20px;
+
+     .firstLine {
+         border-bottom: 1px solid rgba($color: gray, $alpha: 0.2);
+         padding: 10px 0;
+
+         &__from {}
+
+         &__uid-from {
+             color: $first_color
+         }
+
+         &__arrow-icon {
+             color: $first_color;
+             font-size:20px;
+         }
+
+         &__to {}
+
+         &__uid-to {
+             color: $first_color
+         }
+
+     }
+
+     .secondLine {
+         display: flex;
+         justify-content: space-between;
+
+         .flyFrom {
+             .time {}
+
+             .date {
+                 color: $first_color;
+                 padding-left: 5px;
+             }
+         }
+
+         .totalTime {}
+
+         .flyTo {
+             .date {
+                 color: $first_color;
+                 padding-right: 5px;
+             }
+
+             .time {}
+         }
+
+     }
+
+     .transfer {
+         display: flex;
+         justify-content: center;
+         color: $second_color;
+
+         &__line {
+            display: block;
+            border-bottom: 1px solid rgb(115, 112, 112);
+            width: 500px;
+            position: relative;
+         }
+
+         &__count {
+            display: block;
+            position: absolute;
+            top:-12px;
+            left:250px-(34px);
+            background-color: #fff;
+         }
+
+     }
+
+     .totalTime{
+        padding-left: 22px;
     }
-    &__count{
-        display: block;
-        position: absolute;
-        top:-12px;
-        left:250px-(34px);
-        background-color: #fff;
-    }
-}
+ }
+
+
+
+
+

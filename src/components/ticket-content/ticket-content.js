@@ -1,12 +1,13 @@
 import Segment from "../segment";
-import './ticket-content.css';
+import './ticket-content.scss';
 
 const TicketContent = ({ ticket }) => {
   return (
     <div className="ticket">
       <div className="header">
         <div className="header__logo"></div>
-        <h3 className="header__price">total price: {ticket.flight.price.total.amount}</h3>
+        <span className="header__price">{ticket.flight.price.total.amount} &#8381;</span>
+        <span className="header__price-info">Стоимость для одного взрослого пассажира</span>
       </div>
       <div className="content">
         {ticket.flight.legs.map((item) => {

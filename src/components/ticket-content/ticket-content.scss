@@ -1,0 +1,38 @@
+$first_color: #0087c9;
+$second_color: #ffb168;
+
+.header {
+    background-color: $first_color;
+
+    &__logo {}
+
+    &__price {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+        color: #fff;
+        font-size: 26px;
+        &-info{
+            color:#fff;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+    }
+}
+
+.content {
+    hr{
+        border: none;
+        border-top: 2px solid #0087c9;
+        
+    }
+    div:last-child hr{
+        display: none;
+    }
+   
+
+    .middleLine {
+        border-top: 3px solid $first_color;
+    }
+}

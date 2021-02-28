@@ -1,7 +1,7 @@
 import "./segment.scss";
 
-import moment from 'moment';
-import 'moment/locale/ru';
+import moment from "moment";
+import "moment/locale/ru";
 
 const Segment = ({ segment }) => {
   const travelDurationHours = (segment.travelDuration / 60).toFixed(0);
@@ -10,10 +10,19 @@ const Segment = ({ segment }) => {
     travelDurationHours === 0 ? null : travelDurationHours + " " + "ч";
   const showTravelDurationMinutes =
     travelDurationMinutes === 0 ? null : travelDurationMinutes + " " + "мин";
-    let departureTime = moment(segment.departureDate).format('H:mm');
-    let departureDate = moment(segment.departureDate).format('DD MMM ddd').toLowerCase();
-    let arrivalTime = moment(segment.arrivalDate).format('H:mm');
-    let arrivalDate = moment(segment.arrivalDate).format('DD MMM ddd').toLowerCase();
+  let departureTime = moment(segment.departureDate).format("H:mm");
+  let departureDate = moment(segment.departureDate)
+    .format("DD MMM ddd")
+    .toLowerCase();
+  let arrivalTime = moment(segment.arrivalDate).format("H:mm");
+  let arrivalDate = moment(segment.arrivalDate)
+    .format("DD MMM ddd")
+    .toLowerCase();
+
+  const transfer = segment.starting ? (
+    <div className="transfer__count">1 пересадка</div>
+  ) : null;
+
   return (
     <div className="flightTo">
       <div className="firstLine">
@@ -26,7 +35,7 @@ const Segment = ({ segment }) => {
         <span className="firstLine__uid-from">
           ({segment.departureAirport.uid})
         </span>
-        <i className="firstLine__arrow-icon">-></i>
+        <i className="firstLine__arrow-icon"> &rarr; </i>
         <span className="firstLine__to">{segment.arrivalCity?.caption}</span>
         <span className="firstLine__to">
           , {segment.arrivalAirport.caption}{" "}
@@ -50,9 +59,7 @@ const Segment = ({ segment }) => {
         </p>
       </div>
       <div className="transfer">
-        <div className="transfer__line">
-          <div className="transfer__count">1 transfer</div>
-        </div>
+        <div className="transfer__line">{transfer}</div>
       </div>
       <div className="companyName">
         <p className="companyName__content">
