@@ -1,5 +1,9 @@
+https://fssroxx.github.io/aviaSales/ - Демо проекта.
+
+Проект по поиску авиабилетов и их динамической сортировки, в которую входят 4 критерия.
+
 ![image](https://user-images.githubusercontent.com/63402014/110255262-e8610000-7fa3-11eb-8023-3f892fba8067.png)
-Тестовое задание по поиску авиабилетов и их динамической сортировки, в которую входят 4 критерия.
+
 
 # Getting Started with Create React App
 
